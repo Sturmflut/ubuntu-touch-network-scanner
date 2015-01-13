@@ -1,0 +1,15 @@
+{
+    "architecture": "@CLICK_ARCH@",
+    "description": "description of networkscanner",
+    "framework": "ubuntu-sdk-14.10-dev2",
+    "hooks": {
+        "networkscanner": {
+            "apparmor": "networkscanner.apparmor",
+            "desktop": "networkscanner.desktop"
+        }
+    },
+    "maintainer": "Sturm Flut",
+    "name": "com.ubuntu.developer.sturmflut.networkscanner",
+    "title": "networkscanner",
+    "version": "0.1"
+}
