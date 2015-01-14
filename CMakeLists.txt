@@ -1,4 +1,4 @@
-project(networkscanner C CXX)
+project(NetworkScanner C CXX)
 cmake_minimum_required(VERSION 2.8.9)
 
 # Do not remove this line, its required for the correct functionality of the Ubuntu-SDK
@@ -24,8 +24,8 @@ set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
 option(INSTALL_TESTS "Install the tests on make install" on)
 
-set(APP_NAME          networkscanner)
-set(NETWORKSCANNER_DIR "share/qml/networkscanner")
+set(APP_NAME          NetworkScanner)
+set(NetworkScanner_DIR "share/qml/NetworkScanner")
 set(MAIN_QML          "networkscanner.qml")
 set(ICON              "graphics/networkscanner.png")
 
@@ -35,7 +35,7 @@ set(DATA_DIR /)
 set(DESKTOP_DIR ${DATA_DIR})
 set(DESKTOP_FILE_NAME "networkscanner.desktop")
 
-set(EXEC "qmlscene $@ ${NETWORKSCANNER_DIR}/${MAIN_QML}")
+set(EXEC "qmlscene $@ ${NetworkScanner_DIR}/${MAIN_QML}")
 
 # This command figures out the target architecture for use in the manifest file
 execute_process(
@@ -57,17 +57,17 @@ add_subdirectory(po)
 
 add_custom_target("autopilot" chmod +x ${CMAKE_SOURCE_DIR}/app/tests/autopilot/run
                     COMMAND ${CMAKE_SOURCE_DIR}/app/tests/autopilot/run
-                    DEPENDS networkscannerbackend networkscannerbackend-qmldir
+                    DEPENDS NetworkScannerbackend NetworkScannerbackend-qmldir
                     WORKING_DIRECTORY ./app)
 
 add_custom_target("check" /usr/bin/qmltestrunner -input ${CMAKE_SOURCE_DIR}/app/tests/unit -import ${CMAKE_BINARY_DIR}/backend
-                    DEPENDS networkscannerbackend networkscannerbackend-qmldir
+                    DEPENDS NetworkScannerbackend NetworkScannerbackend-qmldir
                     WORKING_DIRECTORY ./app)
 
-add_custom_target("run" /usr/bin/qmlscene -I ${CMAKE_BINARY_DIR}/backend  ${CMAKE_SOURCE_DIR}/app/networkscanner.qml
-                    DEPENDS networkscannerbackend networkscannerbackend-qmldir
+add_custom_target("run" /usr/bin/qmlscene -I ${CMAKE_BINARY_DIR}/backend  ${CMAKE_SOURCE_DIR}/app/NetworkScanner.qml
+                    DEPENDS NetworkScannerbackend NetworkScannerbackend-qmldir
                     WORKING_DIRECTORY ./app)
 
 # No op custom target for all not compiled files, so they show up in the QtCreator project tree
-add_custom_target("networkscanner_ClickFiles" ALL SOURCES "networkscanner.apparmor" "manifest.json.in")
+add_custom_target("NetworkScanner_ClickFiles" ALL SOURCES "networkscanner.apparmor" "manifest.json.in")
 

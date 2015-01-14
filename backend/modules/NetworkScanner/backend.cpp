@@ -6,7 +6,7 @@
 
 void BackendPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("Networkscanner"));
+    Q_ASSERT(uri == QLatin1String("NetworkScanner"));
 
     qmlRegisterType<MyType>(uri, 1, 0, "MyType");
 }

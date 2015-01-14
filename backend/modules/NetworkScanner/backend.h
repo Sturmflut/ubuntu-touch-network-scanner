@@ -7,7 +7,7 @@
 /*
  ----8<-----
 
- import Networkscanner 1.0
+ import NetworkScanner 1.0
 
  Rectangle {
    width: 200
