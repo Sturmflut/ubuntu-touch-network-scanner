@@ -3,30 +3,30 @@ include_directories(
 )
 
 set(
-    NetworkScannerbackend_SRCS
-    modules/NetworkScanner/backend.cpp
-    modules/NetworkScanner/pingprocess.cpp
-    modules/NetworkScanner/pingscanner.cpp
-    modules/NetworkScanner/networkinfo.cpp
-    modules/NetworkScanner/networkaddress.cpp
+    Networkscannerbackend_SRCS
+    modules/Networkscanner/backend.cpp
+    modules/Networkscanner/pingprocess.cpp
+    modules/Networkscanner/pingscanner.cpp
+    modules/Networkscanner/networkinfo.cpp
+    modules/Networkscanner/networkaddress.cpp
 )
 
-add_library(NetworkScannerbackend MODULE
-    ${NetworkScannerbackend_SRCS}
+add_library(Networkscannerbackend MODULE
+    ${Networkscannerbackend_SRCS}
 )
 
-set_target_properties(NetworkScannerbackend PROPERTIES
-         LIBRARY_OUTPUT_DIRECTORY NetworkScanner)
+set_target_properties(Networkscannerbackend PROPERTIES
+         LIBRARY_OUTPUT_DIRECTORY Networkscanner)
 
-qt5_use_modules(NetworkScannerbackend Gui Qml Quick)
+qt5_use_modules(Networkscannerbackend Gui Qml Quick)
 
 # Copy qmldir file to build dir for running in QtCreator
-add_custom_target(NetworkScannerbackend-qmldir ALL
-    COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/modules/NetworkScanner/qmldir ${CMAKE_CURRENT_BINARY_DIR}/NetworkScanner
+add_custom_target(Networkscannerbackend-qmldir ALL
+    COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/modules/Networkscanner/qmldir ${CMAKE_CURRENT_BINARY_DIR}/Networkscanner
     DEPENDS ${QMLFILES}
 )
 
 # Install plugin file
-install(TARGETS NetworkScannerbackend DESTINATION ${QT_IMPORTS_DIR}/NetworkScanner/)
-install(FILES   modules/NetworkScanner/qmldir DESTINATION ${QT_IMPORTS_DIR}/NetworkScanner/)
+install(TARGETS Networkscannerbackend DESTINATION ${QT_IMPORTS_DIR}/Networkscanner/)
+install(FILES   modules/Networkscanner/qmldir DESTINATION ${QT_IMPORTS_DIR}/Networkscanner/)
 

@@ -25,9 +25,10 @@ set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 option(INSTALL_TESTS "Install the tests on make install" on)
 
 set(APP_NAME          NetworkScanner)
-set(NetworkScanner_DIR "share/qml/NetworkScanner")
-set(MAIN_QML          "networkscanner.qml")
-set(ICON              "graphics/networkscanner.png")
+set(APP_ID            "networkscanner.sturmflut")
+set(NETWORKSCANNER_DIR "share/qml/NetworkScanner")
+set(MAIN_QML          "NetworkScanner.qml")
+set(ICON              "graphics/NetworkScanner.png")
 
 # Set install paths
 set(CMAKE_INSTALL_PREFIX /)
@@ -35,7 +36,7 @@ set(DATA_DIR /)
 set(DESKTOP_DIR ${DATA_DIR})
 set(DESKTOP_FILE_NAME "networkscanner.desktop")
 
-set(EXEC "qmlscene $@ ${NetworkScanner_DIR}/${MAIN_QML}")
+set(EXEC "qmlscene $@ ${NETWORKSCANNER_DIR}/${MAIN_QML}")
 
 # This command figures out the target architecture for use in the manifest file
 execute_process(
@@ -69,5 +70,5 @@ add_custom_target("run" /usr/bin/qmlscene -I ${CMAKE_BINARY_DIR}/backend  ${CMAK
                     WORKING_DIRECTORY ./app)
 
 # No op custom target for all not compiled files, so they show up in the QtCreator project tree
-add_custom_target("NetworkScanner_ClickFiles" ALL SOURCES "networkscanner.apparmor" "manifest.json.in")
+add_custom_target("networkscanner_ClickFiles" ALL SOURCES "networkscanner.apparmor" "manifest.json.in")
 

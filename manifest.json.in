@@ -1,15 +1,15 @@
 {
+    "name": "@APP_ID@",
+    "description": "A simple, cheap network scanner",
     "architecture": "@CLICK_ARCH@",
-    "description": "A simple network scanner",
-    "framework": "ubuntu-sdk-14.10",
+    "title": "@APP_NAME@",
     "hooks": {
         "networkscanner": {
             "apparmor": "networkscanner.apparmor",
             "desktop": "networkscanner.desktop"
         }
     },
-    "maintainer": "Sturm Flut",
-    "name": "com.ubuntu.developer.sturmflut.networkscanner",
-    "title": "Network Scanner",
-    "version": "0.1"
+    "version": "0.2",
+    "maintainer": "Sturm Flut <sturmflut@lieberbiber.de>",
+    "framework": "ubuntu-sdk-14.10"
 }

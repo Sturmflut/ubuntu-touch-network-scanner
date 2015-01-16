@@ -3,7 +3,7 @@ import QtQuick 2.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 1.0
 
-import NetworkScanner 1.0
+import Networkscanner 1.0
 
 import "../components"
 
@@ -30,6 +30,8 @@ Tab {
             }
 
             onError: {
+                outputLabel.text = reason
+
                 startButton.iconName = "media-playback-start"
             }
         }
