@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-14 23:26+0100\n"
+"POT-Creation-Date: 2015-01-16 21:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../app/ui/HelloTab.qml:8
-msgid "Hello.."
+#: ../app/ui/HostPingTab.qml:13
+msgid "Ping Host"
 msgstr ""
 
-#: ../app/ui/HelloTab.qml:36
-msgid "You can change the Tab from Page title above."
+#: ../app/ui/NetworkInterfacesDialog.qml:13
+msgid "Subnets"
 msgstr ""
 
-#: ../app/ui/WorldTab.qml:6
-msgid "..World!"
+#: ../app/ui/NetworkInterfacesDialog.qml:24
+msgid "Select a subnet:"
 msgstr ""
 
-#: ../app/ui/WorldTab.qml:22
-msgid "WorldTab"
+#: ../app/ui/NetworkInterfacesDialog.qml:35
+msgid "Ok"
 msgstr ""
 
-#: ../app/ui/WorldTab.qml:31
-msgid "Swipe from bottom to up to reveal the toolbar."
+#: ../app/ui/NetworkInterfacesDialog.qml:53
+msgid "Cancel"
 msgstr ""
 
-#: ../app/ui/WorldTabTools.qml:7
-msgid "Tap me!"
-msgstr ""
-
-#: ../app/ui/WorldTabTools.qml:10
-msgid "Toolbar tapped"
+#: ../app/ui/SubnetPingTab.qml:13
+msgid "Ping Subnet"
 msgstr ""
 
 #: /home/sturmflut/ownCloud/ubuntu-touch/build-ubuntu-touch-networkscanner-Desktop-Default/po/networkscanner.desktop.in.h:1
-msgid "networkscanner"
+msgid "Network Scanner"
 msgstr ""

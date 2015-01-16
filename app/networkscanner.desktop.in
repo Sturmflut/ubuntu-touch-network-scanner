@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=networkscanner
-Comment=My project description
+_Name=Network Scanner
+Comment=A simple network scanner
 Exec=@EXEC@
 Icon=@ICON@
 Terminal=false

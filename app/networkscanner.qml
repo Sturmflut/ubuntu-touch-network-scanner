@@ -3,13 +3,10 @@ import Ubuntu.Components 1.1
 
 import "ui"
 
-/*!
-    \brief MainView with Tabs element.
-           First Tab has a single Label and
-           second Tab has a single ToolbarAction.
-*/
 
 MainView {
+    id: mainView
+
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
 
@@ -25,19 +22,21 @@ MainView {
     // Removes the old toolbar and enables new features of the new header.
     useDeprecatedToolbar: false
 
-    width: units.gu(100)
+    width: units.gu(50)
     height: units.gu(75)
+
 
     Tabs {
         id: tabs
 
-        HelloTab {
-            objectName: "helloTab"
+
+        HostPingTab {
+            id: mainPage
         }
 
-        WorldTab {
-            objectName: "worldTab"
-        }
+        //SubnetPingTab {
+        //    id: subnetPingTab
+        //}
     }
 }
 
