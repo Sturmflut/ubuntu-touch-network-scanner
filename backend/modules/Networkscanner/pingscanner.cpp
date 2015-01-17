@@ -6,7 +6,8 @@ PingScanner::PingScanner(QObject *parent) :
     m_running(false),
     m_numPings(3),
     m_delay(1),
-    m_concurrency(16)
+    m_timeout(5),
+    m_socket(parent)
 {
 
 }
@@ -18,18 +19,11 @@ PingScanner::~PingScanner()
 }
 
 
-void PingScanner::setConcurrency(int concurrency)
-{
-    m_concurrency = concurrency;
-
-    advanceWork();
-}
-
-
-
 void PingScanner::pingHost(QString address)
 {
-    enqueuePing(address);
+    QHostAddress addr(address);
+
+    m_socket.sendEchoRequest(addr);
 }
 
 

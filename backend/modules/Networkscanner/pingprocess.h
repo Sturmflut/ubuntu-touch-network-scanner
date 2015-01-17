@@ -7,6 +7,8 @@
 
 #include <QTimer>
 
+#include "usericmpsocket.h"
+
 
 class PingProcess : public QObject
 {
@@ -45,7 +47,6 @@ private slots:
     void processError(QProcess::ProcessError processError);
     void processFinished();
 
-
 private:
     bool m_running;
 
@@ -53,7 +54,7 @@ private:
     int m_delay;
 
     QProcess* m_process;
-    QTimer* m_timer;
+    QTimer m_timer;
 };
 
 #endif // PINGPROCESS_H

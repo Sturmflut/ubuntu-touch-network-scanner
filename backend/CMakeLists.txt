@@ -5,6 +5,7 @@ include_directories(
 set(
     Networkscannerbackend_SRCS
     modules/Networkscanner/backend.cpp
+    modules/Networkscanner/usericmpsocket.cpp
     modules/Networkscanner/pingprocess.cpp
     modules/Networkscanner/pingscanner.cpp
     modules/Networkscanner/networkinfo.cpp

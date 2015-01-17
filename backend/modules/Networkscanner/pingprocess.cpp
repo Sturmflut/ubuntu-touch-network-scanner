@@ -8,7 +8,7 @@ PingProcess::PingProcess(QObject *parent) :
     m_running(false),
     m_numPings(3),
     m_delay(1),
-    m_process(NULL)
+    m_timer(this)
 {
 
 }

@@ -31,7 +31,7 @@ public:
     int timeout() const { return m_timeout; }
     void setTimeout(int timeout) { m_timeout = timeout; }
 
-    bool isRunning() const { return !m_processList.isEmpty(); }
+    bool isRunning() const { return m_running; }
 
     int concurrency() const { return m_concurrency; }
     void setConcurrency(int concurrency);
@@ -41,10 +41,9 @@ public:
 
 
 Q_SIGNALS:
-    void pingReceived();
-    void failed();
+    void pingReceived(QString address, int bytes, int seq, int ttl, float time);
+    void pingTimedOut(QString address, int bytes, int seq, int ttl, float time);
     void finished();
-
 
 
 private:
@@ -55,6 +54,8 @@ private:
     int m_timeout;
 
     int m_concurrency;
+
+    UserICMPSocket m_socket;
 
     QList<QString> m_workList;
     QList<PingProcess*> m_processList;

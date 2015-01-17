@@ -13,27 +13,31 @@ Tab {
     title: i18n.tr("Ping Host")
 
     page: Page {
-        PingProcess {
-            id: pingProcess
+//        PingProcess {
+//            id: pingProcess
 
-            onPingReceived: {
-                var line = "PING " + address +
-                        " seq=" + seq +
-                        " ttl=" + ttl +
-                        " time=" + time.toFixed(3) + " ms"
+//            onPingReceived: {
+//                var line = "PING " + address +
+//                        " seq=" + seq +
+//                        " ttl=" + ttl +
+//                        " time=" + time.toFixed(3) + " ms"
 
-                outputLabel.text = outputLabel.text + line + "\n"
-            }
+//                outputLabel.text = outputLabel.text + line + "\n"
+//            }
 
-            onFinished: {
-                startButton.iconName = "media-playback-start"
-            }
+//            onFinished: {
+//                startButton.iconName = "media-playback-start"
+//            }
 
-            onError: {
-                outputLabel.text = reason
+//            onError: {
+//                outputLabel.text = reason
 
-                startButton.iconName = "media-playback-start"
-            }
+//                startButton.iconName = "media-playback-start"
+//            }
+//        }
+
+        PingScanner {
+            id: pingScanner
         }
 
 
@@ -53,7 +57,7 @@ Tab {
                 TextField {
                     id: addressField
 
-                    text: "127.0.0.1"
+                    text: "192.168.178.21"
 
                     width: parent.width - startButton.width
                 }
@@ -67,11 +71,11 @@ Tab {
                     width: height
 
                     onClicked: {
-                        if(!pingProcess.running)
+                        if(!pingScanner.running)
                         {
                             outputLabel.text = ""
 
-                            pingProcess.start(addressField.text)
+                            pingScanner.pingHost(addressField.text)
 
                             iconName = "media-playback-pause"
                         }

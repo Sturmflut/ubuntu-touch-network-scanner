@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-16 23:31+0100\n"
+"POT-Creation-Date: 2015-01-17 01:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,6 @@ msgstr ""
 msgid "Ping Subnet"
 msgstr ""
 
-#: /home/sturmflut/ownCloud/ubuntu-touch/build-ubuntu-touch-networkscanner-UbuntuSDK_for_armhf_GCC_ubuntu_sdk_14_10_utopic-Default/po/networkscanner.desktop.in.h:1
+#: /home/sturmflut/ownCloud/ubuntu-touch/build-ubuntu-touch-networkscanner-Desktop-Default/po/networkscanner.desktop.in.h:1
 msgid "NetworkScanner"
 msgstr ""
